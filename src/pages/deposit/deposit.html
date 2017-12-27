@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="primary">
+        <ion-title>Acvivate</ion-title>
+    </ion-navbar>
+</ion-header>
+  
+<ion-content>
+    <div class="dtlsdiv">
+        <div class="blncpnl">
+          <label class="kioslbl">Kiosk&nbsp; <b class="descid">{{kiosk}}</b></label>
+          <label class="kioslbl">Today`s Deposit&nbsp; <b class="descid">Php {{amount}}</b></label>
+        </div>
+      </div>
+      <div class="historydv">
+            <div class="hstrypnls" *ngFor="let item of data">
+                    <table class="tblhstry">
+                    <tr>
+                    <td>
+                      <label class="dtlactivity">Deposited an amount of</label>
+                    </td>
+                    <td  text-right>
+                        <label class="date">{{item.date}}</label>
+                    </td>
+                    </tr>
+              
+                    <tr>
+                    <td>
+                        <label class="dtlactivityamount">PHP {{item.amount}}</label>
+                    </td>
+                    <td  text-right>
+                      <label class="time">{{item.time}}</label>
+                    </td>
+                    </tr>
+                    </table>
+                  </div>
+      </div>
+</ion-content>

@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <div class="hdrdivi">
+      <ion-title></ion-title>
+      <div class="statusicn">
+        <div class="circleicngrn" *ngIf="check == 'Active'"></div>
+        <div class="circleicnred" *ngIf="check == 'Inactive'"></div>
+        <label class="sttslbl">{{check}}</label>
+      </div>
+    </div>
+  </ion-navbar>
+</ion-header>
+<ion-tabs>
+  <ion-tab [root]="tab1Root" tabTitle="History" tabIcon="md-card"></ion-tab>
+  <ion-tab [root]="tab2Root" tabTitle="Active" tabIcon="ios-cash"></ion-tab>
+  <ion-tab [root]="tab3Root" tabTitle="Transaction" tabIcon="contacts"></ion-tab>
+</ion-tabs>

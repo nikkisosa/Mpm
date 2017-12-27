@@ -1,0 +1,14 @@
+page-ledger {
+    @media only screen and (max-width: 375px) {      
+        .scroll-content{
+                overflow-y:hidden;
+                padding:0%;
+        }
+        .scroll-content::-webkit-scrollbar {
+                overflow-y:hidden !important;
+                border:none;
+                width:0;
+                background: rgba(0,0,0,0);
+        }
+}
+}

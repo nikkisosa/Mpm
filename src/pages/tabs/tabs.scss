@@ -1,0 +1,38 @@
+page-tabs{
+        .statusicn{
+            width:40vw;
+            display: flex;
+            flex-direction:row;
+            align-items:right;
+            justify-content:flex-end;
+        }
+        .hdrdivi{
+            display:flex;
+            flex-direction:row;
+        }
+        .circleicngrn{
+            width:5vw;
+            height:5vw;
+            /* background-color:#43c14c; */
+            background: radial-gradient(#36e330,#09ff00);
+            border-radius:50%;
+            border:1.8px solid #FFFFFF;
+        }
+        .circleicnred{
+            width:5vw;
+            height:5vw;
+           /*  background-color:#ff0000; */
+           background: radial-gradient(#a3a3a3,#bababa);
+            border-radius:50%;
+            border:1.8px solid #FFFFFF;
+        }
+        .sttslbl{
+            width:15vw;
+            color:#FFFFFF;
+            font-size:4vw;
+            margin-top:.70%;
+            margin-left:2%;
+            margin-right:3%;
+            text-align:left;
+        }
+}

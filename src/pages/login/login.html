@@ -1,0 +1,28 @@
+
+
+<ion-content>
+<div class="lginbdy">
+<div class="logodv">
+    <img class="mpmlgo" src="assets/imgs/logo.png"/>
+</div>
+
+<div class="lginfrm">
+<div class="usrinp">
+    
+    <ion-item class="inptprprty">
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" [(ngModel)]="user"></ion-input>
+    </ion-item>
+</div>
+<div class="pswinp">
+    <ion-item class="inptprprty">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password" [(ngModel)]="pass" (keyup.enter)="login()"></ion-input>
+    </ion-item>
+</div>
+<div class="btncont">
+    <button ion-button class="lginbtn" (click)="login()">Login</button>
+</div>
+</div>
+</div>
+</ion-content>

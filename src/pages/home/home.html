@@ -4,9 +4,9 @@
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
-<ion-content>
+<ion-content class="scroll-content">
 <div class="homebdy">
-<div class="topdv" style="background-image:url('assets/imgs/mpmbgappvectclr.png'); background-size:contain;background-repeat: no-repeat;">
+<div class="topdv" style="background-image:url('assets/imgs/mpmbgappvectclr.png'); background-size:100vw auto;background-repeat: no-repeat;">
 <div class="uppertier">
   <div class="imgcntnr"><!-- <img src="assets/imgs/usrimgalt.png" class="usrimg"/> --><img src="{{image}}" class="usrimg" /></div>
   <div class="infcntnr">
@@ -21,7 +21,33 @@
 </div>
 </div>
 <div class="bottomdv">
-<div class="navbtns">
+
+    <ion-fab right bottom>
+        <button ion-fab color="headerclr"><ion-icon name="arrow-dropleft"></ion-icon></button>
+        <ion-fab-list side="left">
+
+            <div class="dividerbtn" (click)="pages('settings')">
+                <button ion-fab color="headerclr" class="btnnavi"><ion-icon name="md-settings"></ion-icon></button>
+                <label class="btnlbltxtnotif">Settings</label></div>
+
+            <div class="dividerbtn" (click)="pages('tabs')">
+                <button ion-fab color="headerclr" class="btnnavi"><ion-icon name="ios-albums"></ion-icon></button>
+                <label class="btnlbltxtnotif">Transactions</label></div>
+
+            <div class="dividerbtn" (click)="pages('donations')">
+                <button ion-fab color="headerclr" class="btnnavi"><ion-icon name="md-cash"></ion-icon></button>
+                <label class="btnlbltxtnotif">Donations</label></div>
+
+            <div class="dividerbtn" (click)="pages('notification')">
+                <button ion-fab color="headerclr" class="btnnavi"><ion-icon name="md-notifications"></ion-icon></button>
+                <label class="btnlbltxtnotif">Notifications</label></div>        
+
+           
+        
+        </ion-fab-list>
+      </ion-fab>
+
+<!-- <div class="navbtns">
   <div class="dividerbtn" (click)="pages('notification')">
   <button ion-button class="btnnavi"><ion-icon name="md-notifications"></ion-icon></button>
   <label class="btnlbltxtnotif">Notification</label>
@@ -34,7 +60,7 @@
   <button ion-button color="orange" class="btnnavi"><ion-icon name="md-settings"></ion-icon></button>
   <label class="btnlbltxtstngs">Settings</label>
 </div>
-</div>
+</div> -->
 </div>
 
 </div>

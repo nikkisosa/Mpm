@@ -6,25 +6,49 @@
 -->
 <ion-header>
 
-  <ion-navbar color="primary">
-    <ion-title><label class="hdngtxt">notification</label></ion-title>
+  <ion-navbar color="headerclr">
+    <ion-title><label class="hdngtxt">Notifications</label></ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
-<ion-content>
+<ion-content class="scroll-content">
 <div class="ntfbdy">
-<div class="ntfpnls">
- <table class="tblntf">
- <tr>
-  <td><label class="ntfttl">Title</label></td>   
-  <td text-right><label class="dtlbl">2017-12-22</label></td>
-</tr>  
-<tr>
-<td><label class="ntfsbttl">Sub title</label></td>  
-</tr>
-</table>
+
+<div  *ngIf="connection == 'true'">
+  <div class="ntfpnls" *ngFor="let item of data">
+    <table class="tblntf">
+      <tr>
+        <td>
+          <label class="ntfttl">{{item.title}}</label>
+        </td>
+        <td text-right>
+          <label class="dtlbl">{{item.date}}</label>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <label class="ntfsbttl">{{item.message}}</label>
+        </td>
+      </tr>
+    </table>
+  </div>
 </div>
+<div *ngIf="connection == 'false'">
+  
+<div class="ntfbdynnt">
+  <div class="icnnnt">
+    <img src="assets/imgs/nonet.png" />
+  </div>
+  <div class="txtnnt">
+    No Internet Access
+  </div>
+</div>
+</div>
+
+
+
+
 </div>
 </ion-content>

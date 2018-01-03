@@ -113,8 +113,8 @@ page-home {
     color:#FFFFFF;
     font-size:7vw;
     padding:0%;
-    width:16vw;
-    height:16vw;
+    width:13vw;
+    height:13vw;
     border-radius:50%;
     margin-left:7vw;
     margin-right:7vw;
@@ -129,14 +129,16 @@ page-home {
     flex-direction:column;
     align-items:center;
     justify-content:center;
+    margin-left:.80%;
+    margin-right:.80%;
 }
 .btnlbltxtnotif{
     font-family:'roboto';
-    font-size:3.5vw;
+    font-size:3vw;
     font-weight:bold;
     color:#488aff;
 }
-.btnlbltxttransac{
+/* .btnlbltxttransac{
     font-family:'roboto';
     font-size:3.5vw;
     font-weight:bold;
@@ -148,7 +150,7 @@ page-home {
     font-weight:bold;
     color:#ee701b;
 
-}
+} */
 }
     @media only screen and (min-width: 376px) {     
         

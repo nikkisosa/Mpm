@@ -28,7 +28,6 @@ export class LoginPage {
     await this.services.user_login(this.user, this.pass)
       .then((result) => {
         this.info = result;
-        console.log(this.info);
         if (this.info.status == "success") {
 
           this.sessions.set_local_user_id(this.info.user[0].user_id);

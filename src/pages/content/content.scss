@@ -1,0 +1,55 @@
+page-content {
+    @media only screen and (max-width: 375px) {   
+        .scroll-content{
+            overflow-y:hidden;
+            padding:0%;
+        }
+        .scroll-content::-webkit-scrollbar {
+                overflow-y:hidden !important;
+                border:none;
+                width:0;
+                background: rgba(0,0,0,0);
+        }
+        .hdngtxt{
+            font-size:5vw;
+            font-family:'roboto';
+            font-weight:normal;
+        }
+        .conbdy{
+            width:100vw;
+            height:100vh;
+            padding:0%;
+        }
+        .dntlbl{
+            font-family:'roboto';
+            font-size:4.5vw;
+        }
+        .dntbtn{
+            width:100vw;
+            padding-top:8%;
+            padding-bottom:8%;
+            bottom:0;
+            position:absolute;
+            margin:0%;
+            background: linear-gradient(#488aff, #3e80f3);
+        }
+        .bdybdycon{
+            color:#292929;
+            padding-top:5%;
+            padding-left:5%;
+            padding-right:5%;
+            width:100vw;
+            height:100vw;
+            font-style:'roboto';
+            font-size:4vw;
+        }
+        .btntxt{
+            button{
+                //color:#488aff !important;  
+                color:red !important;
+            }
+        }
+        
+    }
+    
+}

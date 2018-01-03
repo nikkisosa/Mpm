@@ -449,4 +449,26 @@ export class SessionsProvider {
     localStorage.removeItem('announcement');
   }
 
+  /* 
+   *
+   * Donation
+   * 
+  */
+  public set_local_donation(title: any, subtitle: any, content: any, ) {
+    var item = {
+      'title': title,
+      'subtitle': subtitle,
+      'content': content
+    };
+    localStorage.setItem('donate', JSON.stringify(item));
+  }
+
+  public get_local_donation() {
+    return localStorage.getItem('donate');
+  }
+
+  public unset_local_donation() {
+    localStorage.removeItem('donate');
+  }
+
 }

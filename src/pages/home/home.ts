@@ -8,6 +8,8 @@ import { ServicesProvider } from "../../providers/services/services";
 import { NotificationPage } from "../notification/notification";
 import { TabsPage } from "../tabs/tabs";
 import { SettingsPage } from "../settings/settings";
+import { CategoryPage } from "../category/category";
+import { map } from 'rxjs/operator/map';
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html',
@@ -40,7 +42,6 @@ export class HomePage {
    this.mobileno = this.sessions.get_local_mobile();
    this.user_id = this.sessions.get_local_user_id();
    this.image = 'http://192.168.1.2/overschool/'+this.sessions.get_local_image();
-    this.get_announcement();
   }
 
   pages(page:any){
@@ -53,47 +54,17 @@ export class HomePage {
         this.navCtrl.push(TabsPage);
         break;
 
+      case "donations":
+      this.navCtrl.push(CategoryPage);
+        break;  
+
       case "settings":
         this.navCtrl.push(SettingsPage);
         break;
+
       default:
         break;
     }
-  }
-
-  get_announcement(){
-    this.services.user_notification(this.user_id)
-    .then((result)=>{
-      this.announcement = result||[];
-      let data:any = JSON.parse(this.sessions.get_local_announcement());
-      let a: any = JSON.parse(JSON.stringify(this.announcement));
-      console.log(data);
-      if(data == "undefined" || data == null){
-        
-        Object.keys(a).forEach((key) => {
-          console.log(a[key]);
-        });
-        
-        /* announcement.forEach((el, i) => {
-          //this.sessions.set_local_announcement(this.announcement.announcement[0].title, this.announcement.announcement[0].message, this.announcement.announcement[0].date);
-        }); */
-        
-      } else {
-        data.forEach((element, i) => {
-          console.log(element[i].title)
-          if (this.announcement.announcement[0].title == element[i].title) {
-
-          } else {
-            this.announcement.forEach((el, i) => {
-              console.log(el[i]);
-              this.sessions.set_local_announcement(this.announcement.announcement[0].title, this.announcement.announcement[0].message, this.announcement.announcement[0].date);
-            });
-          }
-        });
-      }
-      
-    })
-    .catch(e=>console.log(e));
   }
 
 

@@ -74,11 +74,18 @@ page-login {
         }
         .lginbtn{
             width:80%;
-            font-size:4vw;
-            font-family:'roboto';
+            padding-top:6%;
+            padding-bottom:6%;
+            font-size:4.5vw;
+            font-family:'roboto' !important;
+            background: linear-gradient(#488aff, #3e80f3);
         }
         .mpmlgo{
             width:65vw;
+        }
+        .lgininptlbl{
+            color:#FFFFFF !important;
+            font-family:'roboto';
         }
     }
 }

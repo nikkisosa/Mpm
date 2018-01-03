@@ -8,11 +8,14 @@ import { HomePage } from "../pages/home/home";
 import { LoginPage } from "../pages/login/login";
 import { SplashPage } from "../pages/splash/splash";
 import { ChangepasswordPage } from "../pages/changepassword/changepassword";
+import { CategoryPage } from "../pages/category/category";
+import { ContentPage } from "../pages/content/content";
+
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
-  rootPage: any = HomePage;
+  rootPage: any = SplashPage;
 
   constructor(platform: Platform, statusBar: StatusBar, splashScreen: SplashScreen) {
     platform.ready().then(() => {

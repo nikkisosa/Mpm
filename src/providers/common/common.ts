@@ -19,7 +19,7 @@ export class CommonProvider {
   public closePopOver() {
     this._popOver.dismiss;
   }
-
+  /////////////////////////////////////////////////
   public activeLoading() {
     this.loader = this.loadingCtrl.create({ content: "Please wait ..." })
     this.loader.present();
@@ -28,7 +28,16 @@ export class CommonProvider {
   public closeLoading() {
     this.loader.dismiss();
   }
+  /////////////////////////////////////////////////
 
+  public opening(message = 'Please wait ...') {
+    this.loader = this.loadingCtrl.create({ content: message})
+    this.loader.present();
+  }
+
+  public closing() {
+    this.loader.dismiss();
+  }
   public presentToast(msg) {
     let toast = this.toastCtrl.create({
       message: msg,

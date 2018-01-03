@@ -25,6 +25,8 @@ import { TransactionPage } from "../pages/transaction/transaction";
 import { ServicesProvider } from '../providers/services/services';
 import { CommonProvider } from '../providers/common/common';
 import { SessionsProvider } from '../providers/sessions/sessions';
+import { CategoryPage } from "../pages/category/category";
+import { ContentPage } from "../pages/content/content";
 @NgModule({
   declarations: [
     MyApp,
@@ -40,11 +42,13 @@ import { SessionsProvider } from '../providers/sessions/sessions';
     SettingsPage,
     SplashPage,
     TransactionPage,
-    ChangepasswordPage
+    ChangepasswordPage,
+    CategoryPage,
+    ContentPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false }), HttpModule
+    IonicModule.forRoot(MyApp, { scrollAssist: false, autoFocusAssist: false }), HttpModule,
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -61,7 +65,9 @@ import { SessionsProvider } from '../providers/sessions/sessions';
     SettingsPage,
     SplashPage,
     TransactionPage,
-    ChangepasswordPage
+    ChangepasswordPage,
+    CategoryPage,
+    ContentPage
   ],
   providers: [
     StatusBar,
@@ -70,7 +76,7 @@ import { SessionsProvider } from '../providers/sessions/sessions';
     ServicesProvider,
     CommonProvider,
     HttpModule,
-    SessionsProvider, Network
+    SessionsProvider, Network,
   ]
 })
 export class AppModule {}

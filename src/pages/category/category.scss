@@ -1,0 +1,73 @@
+page-category {
+    @media only screen and (max-width: 375px) {      
+        .scroll-content{
+                overflow-y:hidden;
+                padding:0%;
+        }
+        .scroll-content::-webkit-scrollbar {
+                overflow-y:hidden !important;
+                border:none;
+                width:0;
+                background: rgba(0,0,0,0);
+        }
+        .hdngtxt{
+            font-size:5vw;
+            font-family:'roboto';
+            font-weight:normal;
+            }
+        .catbdy{
+            width:100vw;
+            min-height:100vh;
+            max-height:100vh;
+            overflow-y:scroll;
+            padding:0%;
+            padding-left:2.5vw;
+        }
+        .catbdy::-webkit-scrollbar{
+            overflow-y:scroll;
+            border:none;
+            width:0;
+            background: rgba(0,0,0,0);
+        }
+        .catpnl{
+            width:95vw;
+            height:20vw;
+            border-bottom:1.3px solid #ececec;
+            padding:0%;
+            padding-left:1%;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        .avtrcat{
+            width:13vw;
+            height:13vw;
+            padding:0%;
+            border-radius:50%;
+        }
+        .imgtd{
+            padding:0%;
+            width:18vw;
+            font-size:4.5vw;
+            font-family:'roboto';
+        }
+        .dtlstd{
+            padding:0%;
+            width:70vw;
+            height:13vw;
+            display:flex;
+            flex-direction:column;
+            justify-content:center;
+        }
+        .sbttl{
+            font-family:'roboto';
+            color:#9c9c9c;
+            font-size:4vw;
+        }
+        .ttl{
+            color:#292929;
+            font-size:4.8vw;
+            font-family:'roboto';
+        }
+}
+}
